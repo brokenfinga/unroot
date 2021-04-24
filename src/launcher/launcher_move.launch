@@ -1,0 +1,6 @@
+<launch>
+    <node name='sender' pkg='robot_move' type='talker.py'/>   
+    <node name='receiver' pkg='robot_move' type='subscriber.py'/>   
+</launch>
+
+

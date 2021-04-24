@@ -35,3 +35,11 @@
 /home/ubuntu/catkin_ws/build/gtest/googletest/CMakeFiles/test.dir
 /home/ubuntu/catkin_ws/build/gtest/googletest/CMakeFiles/gtest_main.dir
 /home/ubuntu/catkin_ws/build/gtest/googletest/CMakeFiles/gtest.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/install/strip.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/install/local.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/install.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/list_install_components.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/rebuild_cache.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/edit_cache.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/test.dir
+/home/ubuntu/catkin_ws/build/robot_move/CMakeFiles/_catkin_empty_exported_target.dir
