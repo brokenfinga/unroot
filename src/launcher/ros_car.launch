@@ -1,0 +1,13 @@
+
+<launch>
+
+<node pkg="donkey_car" name="dk_llc_3" type="low_level_control_blob_chase.py" output="screen" >
+</node>
+
+<node pkg="opencv" name="dk_find" type="find_ball.py" output="screen" >
+</node>
+
+<node pkg="donkey_car" name="dk_chase" type="chase_the_ball.py" output="screen" >
+</node>
+
+</launch>
