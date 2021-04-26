@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: ioTa
+Description: Description of ioTa
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

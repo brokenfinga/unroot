@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: laser_scanner_tfmini
+Description: Description of laser_scanner_tfmini
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

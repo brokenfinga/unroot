@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/install
+
+Name: donkey_car
+Description: Description of donkey_car
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,17 @@
+<launch>
+  <arg name="camera_id" default="0"/>
+  <arg name="camera_frame_id" default="ioTa_eye_frame_id"/>
+  <arg name="camera_name" default="ioTa_eye"/>
+
+  <node type="usb_cam" pkg="usb_cam" name="usb_cam_node" output="screen">
+    <param name="camera_frame_id" value="$(arg camera_frame_id)"/> 
+    <param name="camera_id" value="$(arg camera_id)"/> 
+    <param name="camera_name" value="$(arg camera_name)"/>
+    <param name="image_width" value="320"/>
+    <param name="image_ height" value="240"/>
+    <param name="framerate" value="20"/>
+    
+    
+  </node>
+</launch>
+

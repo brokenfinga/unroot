@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/catkin_ws/devel
+
+Name: ce30c_driver
+Description: Description of ce30c_driver
+Version: 1.9.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
