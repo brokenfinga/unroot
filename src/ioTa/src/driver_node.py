@@ -114,7 +114,7 @@ class Motor:
         else:
             self.mot_pkg.setM1Speed(int(speed))
         if (speed != self.prev_speed):
-            rospy.loginfo("motor"+ str(self.mot_num) + ":" +str(cmd[0])+" speed1"+ str(self.mot_num) + ":"+str(cmd[1]))
+            rospy.loginfo("motor"+ str(self.mot_num) + ": " +str(speed))
             self.prev_speed = speed
         # Positive speeds move wheels forward, negative speeds
         # move wheels backward

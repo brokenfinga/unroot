@@ -55,10 +55,10 @@ class BlobDetector:
         self.blob_point = Point()
     
         print (">> Publishing image to topic image_blob")
-        self.image_pub = rospy.Publisher("/blob/image_blob",Image,queue_size=1)
-        self.mask_pub = rospy.Publisher("/blob/image_mask",Image,queue_size=1)
+        self.image_pub = rospy.Publisher("/plant/image_plant",Image,queue_size=1)
+        self.mask_pub = rospy.Publisher("/plant/image_mask",Image,queue_size=1)
         print (">> Publishing position to topic point_blob")
-        self.blob_pub  = rospy.Publisher("/blob/point_blob",Point,queue_size=1)
+        self.blob_pub  = rospy.Publisher("/plant/point_plant",Point,queue_size=1)
 
         self.bridge = CvBridge()
         self.image_sub = rospy.Subscriber("/usb_cam/image_raw",Image,self.callback)
@@ -131,12 +131,12 @@ class BlobDetector:
             self._t0 = time.time()
             
 def main(args):
-    blue_min = (77,40,0)
-    blue_max = (101, 255, 255) 
+   # blue_min = (77,40,0)
+    #blue_max = (101, 255, 255) 
     # blue_min = (82,31,62)
     # blue_max = (106, 116, 193)     
-    blue_min = (55,40,0)
-    blue_max = (150, 255, 255)     
+    blue_min = (37,149,77)
+    blue_max = (93, 255, 197)     
     
     blur     = 5
     min_size = 10

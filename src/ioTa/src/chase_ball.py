@@ -27,7 +27,7 @@ class ChaseBall():
         self.blob_y         = 0.0
         self._time_detected = 0.0
         
-        self.sub_center = rospy.Subscriber("/blob/point_blob", Point, self.update_ball)
+        self.sub_center = rospy.Subscriber("/plant/point_plant", Point, self.update_ball)
         rospy.loginfo("Subscribers set")
         
         self.pub_twist = rospy.Publisher("/cmd_vel", Twist, queue_size=5)
@@ -61,7 +61,8 @@ class ChaseBall():
             #--- Apply steering, proportional to how close is the object
             steer_action   =-K_LAT_DIST_TO_STEER*self.blob_x
             steer_action   = saturate(steer_action, -1.5, 1.5)
-            rospy.loginfo("Steering command %.2f"%steer_action) 
+
+            #rospy.loginfo("Steering command %.2f"%steer_action) 
             throttle_action = 1.0 
             
         return (steer_action, throttle_action)
@@ -70,12 +71,14 @@ class ChaseBall():
         
         #--- Set the control rate
         rate = rospy.Rate(5)
-
+        prev_steer=0.0
         while not rospy.is_shutdown():
             #-- Get the control action
             steer_action, throttle_action    = self.get_control_action() 
-            
-            rospy.loginfo("Steering = %3.1f"%(steer_action))
+            if(steer_action != prev_steer):
+                rospy.loginfo("Steering = %3.1f"%(steer_action))
+                prev_steer = steer_action
+            #rospy.loginfo("Steering = %3.1f"%(steer_action))
             
             #-- update the message
             self._message.linear.x  = throttle_action
